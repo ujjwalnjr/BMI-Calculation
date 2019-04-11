@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dp"
+    android:background="#f2f5df"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/txt_title"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ccc"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:background="#FF5722"
+        android:text="BMI Calculation" />
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:text="Enter Your Height :" />
+
+    <EditText
+        android:id="@+id/et_height"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_title"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/tv_height"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/tv_height1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/et_height"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_title"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+        android:text="cm" />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/et_height"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:text="Enter Your Weight :" />
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_height"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/tv_weight"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv_weight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/et_weight"
+        android:layout_below="@id/tv_height1"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+        android:text="kg" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_weight"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:onClick="calculateBMI"
+        android:background="#00d2ff"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:text="Calculate BMI" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="Your BMI is :" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/result"
+        android:text="BMI Category: "
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
